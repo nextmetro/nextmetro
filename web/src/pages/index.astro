@@ -1,5 +1,9 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
+
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
 ---
 
 <SiteLayout
@@ -15,8 +19,8 @@ import SiteLayout from "../layouts/SiteLayout.astro";
         a minute, or catch the next one.
       </p>
       <div class="button-row">
-        <a class="button primary" href="/support/">Get Support</a>
-        <a class="button secondary" href="/privacy/">Read Privacy</a>
+        <a class="button primary" href={`${baseUrl}support/`}>Get Support</a>
+        <a class="button secondary" href={`${baseUrl}privacy/`}>Read Privacy</a>
       </div>
       <div class="trust-row" aria-label="Next Metro product highlights">
         <span>Fast glance</span>

@@ -12,6 +12,14 @@ const navItems = [
   { href: "/privacy/", label: "Privacy" },
   { href: "/support/", label: "Support" },
 ];
+
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const withBase = (path: string) =>
+  `${baseUrl}${path.replace(/^\//, "")}`;
+const isCurrent = (path: string) =>
+  currentPath === path || currentPath === withBase(path);
 ---
 
 <!doctype html>
@@ -26,14 +34,14 @@ const navItems = [
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#0d161b" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
+    <link rel="icon" href={withBase("/favicon.ico")} />
     <title>{title}</title>
   </head>
   <body>
     <header class="header-wrap">
       <div class="site-header" aria-label="Primary navigation">
-        <a class="brand" href="/" aria-label="Next Metro home">
+        <a class="brand" href={withBase("/")} aria-label="Next Metro home">
           <span class="brand-mark" aria-hidden="true">
             <span class="brand-clock"></span>
             <span class="brand-route"></span>
@@ -44,8 +52,8 @@ const navItems = [
           {
             navItems.map((item) => (
               <a
-                href={item.href}
-                aria-current={currentPath === item.href ? "page" : undefined}
+              href={withBase(item.href)}
+              aria-current={isCurrent(item.href) ? "page" : undefined}
               >
                 {item.label}
               </a>
@@ -61,7 +69,7 @@ const navItems = [
 
     <footer class="site-footer">
       <div>
-        <a class="brand compact" href="/">
+        <a class="brand compact" href={withBase("/")}>
           <span class="brand-mark" aria-hidden="true">
             <span class="brand-clock"></span>
             <span class="brand-route"></span>
@@ -71,8 +79,8 @@ const navItems = [
         <p>Know when to leave for the next train.</p>
       </div>
       <nav aria-label="Footer navigation">
-        <a href="/privacy/">Privacy</a>
-        <a href="/support/">Support</a>
+        <a href={withBase("/privacy/")}>Privacy</a>
+        <a href={withBase("/support/")}>Support</a>
         <a href="mailto:support@nextmetro.app">support@nextmetro.app</a>
       </nav>
     </footer>
