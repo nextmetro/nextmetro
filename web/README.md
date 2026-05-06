@@ -1,6 +1,6 @@
-# MetroTimer Web
+# NextMetro Web
 
-Marketing, privacy, and support pages for MetroTimer.
+Marketing, privacy, and support pages for NextMetro.
 
-MetroTimer helps riders know when to leave for the next train. The web app is
+NextMetro helps riders know when to leave for the next train. The web app is
 built with Astro and deploys to GitHub Pages.
