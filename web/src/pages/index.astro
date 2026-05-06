@@ -1,0 +1,689 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+---
+
+<SiteLayout
+  title="Next Metro | Know when to leave for the next train"
+  description="Next Metro helps you know when to leave for the next train with clear timing, station, and route information."
+>
+  <section class="hero section">
+    <div class="hero-copy">
+      <p class="eyebrow">nextmetro.app</p>
+      <h1>Know exactly when to leave.</h1>
+      <p class="lead">
+        Next Metro turns train arrivals into one calm decision: leave now, wait
+        a minute, or catch the next one.
+      </p>
+      <div class="button-row">
+        <a class="button primary" href="/support/">Get Support</a>
+        <a class="button secondary" href="/privacy/">Read Privacy</a>
+      </div>
+      <div class="trust-row" aria-label="Next Metro product highlights">
+        <span>Fast glance</span>
+        <span>Station focused</span>
+        <span>Watch ready</span>
+      </div>
+    </div>
+
+    <div class="product-stage" aria-label="Next Metro departure preview">
+      <div class="train-strip" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="watch-device">
+        <div class="watch-screen">
+          <div class="watch-top">
+            <span>Next Metro</span>
+            <strong>7:42</strong>
+          </div>
+          <div class="dial" aria-hidden="true">
+            <span class="minute-hand"></span>
+            <span class="hour-hand"></span>
+          </div>
+          <div class="departure-card">
+            <div class="status-row">
+              <span>Green Line</span>
+              <strong>Board in 8 min</strong>
+            </div>
+            <div class="timer">7:42</div>
+            <div class="route-line" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="station-row">
+              <span>Leave now</span>
+              <span>Platform 2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-card eta-card panel" aria-hidden="true">
+        <span>Next train</span>
+        <strong>8 min</strong>
+      </div>
+      <div class="floating-card station-card panel" aria-hidden="true">
+        <span>Nearest station</span>
+        <strong>Navy Yard/Ballpark</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="section proof-section">
+    <div class="proof-line">
+      <span>Arrival signal</span>
+      <span>Walking window</span>
+      <span>Platform cue</span>
+      <span>Tap-light flow</span>
+    </div>
+  </section>
+
+  <section class="section story-section">
+    <div>
+      <p class="eyebrow">Timing for real commutes</p>
+      <h2>Designed for the moment before you leave.</h2>
+    </div>
+    <p>
+      Next Metro keeps the interface focused on the few details that change your
+      choice: route, station, minutes to board, and whether you should start
+      moving.
+    </p>
+  </section>
+
+  <section class="section feature-band">
+    <div class="grid three feature-grid">
+      <article class="feature panel">
+        <span class="feature-index">01</span>
+        <h3>Leave With Confidence</h3>
+        <p>
+          See the next departure in plain language so you can decide whether to
+          walk, wait, or move a little faster.
+        </p>
+      </article>
+      <article class="feature panel">
+        <span class="feature-index">02</span>
+        <h3>Station Focused</h3>
+        <p>
+          Keep attention on your station, route, and platform instead of digging
+          through a full transit map at the last minute.
+        </p>
+      </article>
+      <article class="feature panel">
+        <span class="feature-index">03</span>
+        <h3>Watch Ready</h3>
+        <p>
+          The brand carries the same quick-glance feel as the app: clock, route,
+          and arrival signal in one compact view.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section app-strip">
+    <div class="strip-copy">
+      <p class="eyebrow">Glanceable by default</p>
+      <h2>Metro timing, reduced to the useful parts.</h2>
+    </div>
+    <div class="strip-grid">
+      <div class="mini-panel panel">
+        <span>Leave in</span>
+        <strong>3 min</strong>
+      </div>
+      <div class="mini-panel panel active">
+        <span>Board in</span>
+        <strong>8 min</strong>
+      </div>
+      <div class="mini-panel panel">
+        <span>Backup</span>
+        <strong>14 min</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="section split-section">
+    <div>
+      <p class="eyebrow">Simple by design</p>
+      <h2>Less schedule hunting. More making the train.</h2>
+    </div>
+    <p>
+      Next Metro is for the small window before a trip starts. Open it, check
+      the next train, and leave at the right moment.
+    </p>
+  </section>
+</SiteLayout>
+
+<style>
+  .hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
+    align-items: center;
+    gap: 54px;
+    min-height: calc(100vh - 65px);
+    padding-top: 52px;
+  }
+
+  .hero::before {
+    position: absolute;
+    top: 13%;
+    right: 7%;
+    left: 42%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(96, 235, 162, 0.5), transparent);
+    content: "";
+  }
+
+  .hero-copy {
+    min-width: 0;
+  }
+
+  .hero h1 {
+    max-width: 780px;
+  }
+
+  .trust-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 26px;
+  }
+
+  .trust-row span {
+    padding: 8px 11px;
+    border: 1px solid rgba(232, 247, 239, 0.12);
+    border-radius: 999px;
+    background: rgba(245, 250, 247, 0.045);
+    color: var(--muted);
+    font-size: 0.84rem;
+    font-weight: 680;
+  }
+
+  .product-stage {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 650px;
+    isolation: isolate;
+  }
+
+  .product-stage::before {
+    position: absolute;
+    width: min(92%, 620px);
+    aspect-ratio: 1;
+    border: 1px solid rgba(96, 235, 162, 0.14);
+    border-radius: 50%;
+    background:
+      radial-gradient(circle, rgba(96, 235, 162, 0.14), transparent 58%),
+      radial-gradient(circle at 70% 28%, rgba(87, 199, 255, 0.15), transparent 30%);
+    content: "";
+    filter: blur(1px);
+    z-index: -2;
+  }
+
+  .product-stage::after {
+    position: absolute;
+    right: 2%;
+    bottom: 15%;
+    left: 4%;
+    height: 130px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.32);
+    content: "";
+    filter: blur(38px);
+    z-index: -1;
+  }
+
+  .train-strip {
+    position: absolute;
+    top: 24px;
+    right: 0;
+    left: 0;
+    height: 24px;
+    transform: rotate(-8deg);
+  }
+
+  .train-strip::before {
+    position: absolute;
+    top: 10px;
+    right: 5%;
+    left: 9%;
+    height: 7px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--green), var(--mint), var(--cyan));
+    content: "";
+    box-shadow: 0 12px 34px rgba(96, 235, 162, 0.25);
+  }
+
+  .train-strip span {
+    position: absolute;
+    top: 1px;
+    width: 24px;
+    height: 24px;
+    border: 6px solid var(--mint);
+    border-radius: 50%;
+    background: var(--bg);
+  }
+
+  .train-strip span:nth-child(1) {
+    left: 16%;
+  }
+
+  .train-strip span:nth-child(2) {
+    left: 51%;
+  }
+
+  .train-strip span:nth-child(3) {
+    right: 10%;
+  }
+
+  .watch-device {
+    position: relative;
+    width: min(78vw, 390px);
+    aspect-ratio: 0.82;
+    padding: 17px;
+    border: 1px solid rgba(232, 247, 239, 0.22);
+    border-radius: 56px;
+    background:
+      linear-gradient(150deg, rgba(255, 255, 255, 0.2), transparent 28%),
+      linear-gradient(180deg, #243840, #081014 78%);
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+      0 44px 100px rgba(0, 0, 0, 0.42);
+  }
+
+  .watch-device::before,
+  .watch-device::after {
+    position: absolute;
+    left: 50%;
+    width: 42%;
+    height: 94px;
+    border: 1px solid rgba(232, 247, 239, 0.16);
+    background: linear-gradient(90deg, #111d23, #23373f, #111d23);
+    content: "";
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  .watch-device::before {
+    bottom: calc(100% - 12px);
+    border-radius: 34px 34px 12px 12px;
+  }
+
+  .watch-device::after {
+    top: calc(100% - 12px);
+    border-radius: 12px 12px 34px 34px;
+  }
+
+  .watch-screen {
+    position: relative;
+    display: grid;
+    align-content: space-between;
+    height: 100%;
+    overflow: hidden;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 42px;
+    background:
+      radial-gradient(circle at 50% 38%, rgba(96, 235, 162, 0.18), transparent 38%),
+      #081014;
+  }
+
+  .watch-screen::before {
+    position: absolute;
+    width: 270px;
+    aspect-ratio: 1;
+    place-self: center;
+    border: 16px solid var(--green);
+    border-radius: 50%;
+    content: "";
+    opacity: 0.95;
+  }
+
+  .watch-top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 0.84rem;
+    font-weight: 700;
+  }
+
+  .watch-top strong {
+    color: var(--soft);
+  }
+
+  .dial {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+  }
+
+  .minute-hand,
+  .hour-hand {
+    position: absolute;
+    border-radius: 999px;
+    background: var(--text);
+    transform-origin: 50% 100%;
+  }
+
+  .minute-hand {
+    width: 5px;
+    height: 95px;
+    transform: translateY(-48px);
+  }
+
+  .hour-hand {
+    width: 6px;
+    height: 78px;
+    background: var(--soft);
+    transform: translate(35px, 42px) rotate(124deg);
+  }
+
+  .departure-card {
+    position: relative;
+    z-index: 2;
+    padding: 22px;
+    border: 1px solid rgba(232, 247, 239, 0.13);
+    border-radius: 8px;
+    background: rgba(13, 22, 27, 0.86);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.28);
+  }
+
+  .status-row,
+  .station-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .status-row strong {
+    color: var(--mint);
+    white-space: nowrap;
+  }
+
+  .timer {
+    margin: 18px 0 18px;
+    font-size: clamp(4.2rem, 9vw, 6.4rem);
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 0.88;
+  }
+
+  .route-line {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 4px 20px;
+  }
+
+  .route-line::before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    height: 7px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--green), var(--mint));
+    content: "";
+    transform: translateY(-50%);
+  }
+
+  .route-line span {
+    position: relative;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    border: 6px solid var(--green);
+    border-radius: 50%;
+    background: var(--bg);
+  }
+
+  .floating-card {
+    position: absolute;
+    z-index: 3;
+    display: grid;
+    gap: 6px;
+    min-width: 150px;
+    padding: 16px;
+    background: rgba(18, 31, 38, 0.68);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 26px 60px rgba(0, 0, 0, 0.28);
+  }
+
+  .floating-card span,
+  .mini-panel span {
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 720;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .floating-card strong,
+  .mini-panel strong {
+    color: var(--text);
+    font-size: 1.25rem;
+  }
+
+  .eta-card {
+    top: 138px;
+    right: 6px;
+  }
+
+  .station-card {
+    bottom: 104px;
+    left: 6px;
+  }
+
+  .proof-section {
+    padding-top: 0;
+    padding-bottom: 26px;
+  }
+
+  .proof-line {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(245, 250, 247, 0.035);
+  }
+
+  .proof-line span {
+    min-height: 74px;
+    padding: 26px 22px;
+    border-right: 1px solid var(--line);
+    color: var(--soft);
+    font-weight: 740;
+  }
+
+  .proof-line span:last-child {
+    border-right: 0;
+  }
+
+  .story-section,
+  .app-strip {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 460px);
+    align-items: end;
+    gap: 42px;
+  }
+
+  .story-section p:last-child {
+    margin: 0;
+    color: var(--soft);
+    font-size: 1.12rem;
+  }
+
+  .feature-band {
+    padding-top: 18px;
+  }
+
+  .feature-grid {
+    margin-top: 0;
+  }
+
+  .feature {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feature::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--green), var(--mint), var(--cyan));
+    content: "";
+    opacity: 0.92;
+  }
+
+  .feature-index {
+    display: block;
+    margin-bottom: 54px;
+    color: rgba(219, 233, 227, 0.42);
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
+
+  .app-strip {
+    padding-top: 36px;
+    border-top: 1px solid var(--line);
+  }
+
+  .strip-grid {
+    display: grid;
+    gap: 12px;
+  }
+
+  .mini-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 82px;
+    padding: 18px 20px;
+  }
+
+  .mini-panel.active {
+    border-color: rgba(96, 235, 162, 0.42);
+    background:
+      linear-gradient(135deg, rgba(96, 235, 162, 0.18), rgba(87, 199, 255, 0.1)),
+      rgba(19, 32, 39, 0.8);
+  }
+
+  .split-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
+    align-items: end;
+    gap: 40px;
+    border-top: 1px solid var(--line);
+  }
+
+  .split-section p:last-child {
+    margin: 0;
+    color: var(--soft);
+    font-size: 1.12rem;
+  }
+
+  @media (max-width: 980px) {
+    .hero,
+    .story-section,
+    .app-strip,
+    .split-section {
+      grid-template-columns: 1fr;
+    }
+
+    .hero {
+      min-height: auto;
+    }
+
+    .product-stage {
+      min-height: 620px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .product-stage {
+      min-height: 540px;
+    }
+
+    .watch-device {
+      width: min(84vw, 350px);
+      border-radius: 46px;
+    }
+
+    .watch-screen {
+      border-radius: 34px;
+      padding: 20px;
+    }
+
+    .watch-screen::before {
+      width: 226px;
+    }
+
+    .floating-card {
+      display: none;
+    }
+
+    .proof-line {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .proof-line span:nth-child(2) {
+      border-right: 0;
+    }
+
+    .proof-line span:nth-child(-n + 2) {
+      border-bottom: 1px solid var(--line);
+    }
+  }
+
+  @media (max-width: 520px) {
+    .hero {
+      padding-top: 44px;
+    }
+
+    .product-stage {
+      min-height: 490px;
+    }
+
+    .watch-device {
+      width: min(88vw, 318px);
+      padding: 13px;
+      border-radius: 40px;
+    }
+
+    .watch-screen {
+      border-radius: 30px;
+      padding: 18px;
+    }
+
+    .watch-screen::before {
+      width: 202px;
+      border-width: 13px;
+    }
+
+    .departure-card {
+      padding: 18px;
+    }
+
+    .timer {
+      font-size: 4.25rem;
+    }
+
+    .status-row,
+    .station-row {
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+</style>
