@@ -3,41 +3,59 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 
 <SiteLayout
-  title="Privacy | Next Metro"
-  description="Privacy information for Next Metro, the app for knowing when to leave for the next train."
+  title="Privacy | MetroTimer"
+  description="Privacy information for MetroTimer, the iPhone and Apple Watch app for timing your Metro ride."
 >
   <section class="section tight content-page">
     <p class="eyebrow">Privacy</p>
-    <h1>Privacy that stays out of your way.</h1>
+    <h1>MetroTimer Privacy Policy</h1>
     <p class="lead">
-      Next Metro is designed to help you time your trip without turning your
-      commute into a profile.
+      MetroTimer is designed to help you time your trip without creating an
+      account, tracking you, or building a commute profile.
     </p>
 
     <div class="content-block">
       <h2>Data We Collect</h2>
       <p>
-        Next Metro does not require an account. The app may use the station,
-        route, and timing preferences you choose so it can show relevant train
-        information on your device.
+        MetroTimer does not collect personal data from you and does not require
+        an account. Your WMATA API key, walk buffer, commute window, and route
+        settings are stored on your devices so the app can request relevant train
+        predictions.
       </p>
     </div>
 
     <div class="content-block">
-      <h2>Location</h2>
+      <h2>Location and Tracking</h2>
       <p>
-        If the app requests location access, it is used to help estimate nearby
-        stations or commute timing. You can change location permissions at any
-        time in your device settings.
+        MetroTimer does not request location access and does not track you across
+        apps or websites.
       </p>
     </div>
 
     <div class="content-block">
-      <h2>Third-Party Services</h2>
+      <h2>Apple Watch Sync</h2>
       <p>
-        Next Metro may rely on transit data providers to display arrival
-        information. Those providers can update schedules, predictions, or
-        service details independently from the app.
+        If you use the Apple Watch app, MetroTimer syncs your WMATA API key and
+        commute settings from your iPhone to your Apple Watch using Apple's
+        WatchConnectivity framework.
+      </p>
+    </div>
+
+    <div class="content-block">
+      <h2>WMATA</h2>
+      <p>
+        MetroTimer sends your WMATA API key to WMATA only when requesting train
+        predictions. WMATA provides the arrival data and may process requests
+        according to its own terms and policies.
+      </p>
+    </div>
+
+    <div class="content-block">
+      <h2>Notifications</h2>
+      <p>
+        If you enable notifications, MetroTimer schedules local reminders on your
+        device so you know when to start walking. Notification permissions can be
+        changed in iOS or watchOS Settings.
       </p>
     </div>
 
