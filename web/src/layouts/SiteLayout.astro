@@ -20,6 +20,7 @@ const withBase = (path: string) =>
   `${baseUrl}${path.replace(/^\//, "")}`;
 const isCurrent = (path: string) =>
   currentPath === path || currentPath === withBase(path);
+const previewImageUrl = new URL(withBase("/preview.png"), Astro.site ?? Astro.url.origin);
 ---
 
 <!doctype html>
@@ -33,6 +34,13 @@ const isCurrent = (path: string) =>
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content={previewImageUrl} />
+    <meta property="og:image:width" content="1731" />
+    <meta property="og:image:height" content="909" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={previewImageUrl} />
     <meta name="theme-color" content="#0d161b" />
     <link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
     <link rel="icon" href={withBase("/favicon.ico")} />
