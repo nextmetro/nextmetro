@@ -7,25 +7,26 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
 ---
 
 <SiteLayout
-  title="NextMetro | Know when to leave for the next train"
-  description="NextMetro helps you know when to leave for the next train with clear timing, station, and route information for Navy Yard to Greenbelt."
+  title="NextMetro | A calmer way to catch Metro"
+  description="NextMetro is a Watch-first WMATA commute helper that turns real-time train arrivals into a simple leave-or-wait decision."
 >
   <section class="hero section">
     <div class="hero-copy">
-      <p class="eyebrow">NextMetro</p>
-      <h1>Know exactly when to leave.</h1>
+      <p class="eyebrow">NextMetro for Apple Watch</p>
+      <h1>Leave at the right minute.</h1>
       <p class="lead">
-        NextMetro turns train arrivals into one calm decision: leave now, wait
-        a minute, or catch the next one.
+        NextMetro watches WMATA train arrivals for your commute and turns them
+        into one calm decision: start walking, wait a minute, or catch the next
+        train.
       </p>
       <div class="button-row">
-        <a class="button primary" href={`${baseUrl}support/`}>Get Support</a>
-        <a class="button secondary" href={`${baseUrl}privacy/`}>Read Privacy</a>
+        <a class="button primary" href="mailto:support@nextmetro.app?subject=NextMetro%20Beta">Join Beta</a>
+        <a class="button secondary" href={`${baseUrl}support/`}>Get Support</a>
       </div>
       <div class="trust-row" aria-label="NextMetro product highlights">
-        <span>Fast glance</span>
-        <span>Station focused</span>
-        <span>Watch ready</span>
+        <span>WMATA arrivals</span>
+        <span>Leave alerts</span>
+        <span>No account</span>
       </div>
     </div>
 
@@ -58,17 +59,17 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
             </div>
             <div class="station-row">
               <span>Leave now</span>
-              <span>Platform 2</span>
+              <span>Navy Yard</span>
             </div>
           </div>
         </div>
       </div>
       <div class="floating-card eta-card panel" aria-hidden="true">
-        <span>Next train</span>
+        <span>Next catchable</span>
         <strong>8 min</strong>
       </div>
       <div class="floating-card station-card panel" aria-hidden="true">
-        <span>Nearest station</span>
+        <span>Current beta</span>
         <strong>Navy Yard/Ballpark</strong>
       </div>
     </div>
@@ -76,46 +77,46 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
 
   <section class="section proof-section">
     <div class="proof-line">
-      <span>Arrival signal</span>
-      <span>Walking window</span>
-      <span>Platform cue</span>
-      <span>Tap-light flow</span>
+      <span>Real-time WMATA arrivals</span>
+      <span>Personal walk buffer</span>
+      <span>Commute window</span>
+      <span>Watch leave alerts</span>
     </div>
   </section>
 
   <section class="section story-section">
     <div>
       <p class="eyebrow">Timing for real commutes</p>
-      <h2>Designed for the moment before you leave.</h2>
+      <h2>Built for the small decision before a trip starts.</h2>
     </div>
     <p>
-      NextMetro keeps the interface focused on the few details that change your
-      choice: route, station, minutes to board, and whether you should start
-      moving.
+      The first beta is focused on a Navy Yard to Greenbelt commute, with the
+      phone app handling settings and Apple Watch keeping the actual departure
+      cue close at hand.
     </p>
   </section>
 
   <section class="section feature-band">
     <div class="grid three feature-grid">
       <article class="feature panel">
-        <h3>Leave With Confidence</h3>
+        <h3>Know When To Move</h3>
         <p>
-          See the next departure in plain language so you can decide whether to
-          walk, wait, or move a little faster.
+          See the next catchable train in plain language, adjusted for your
+          walk time and commute window.
         </p>
       </article>
       <article class="feature panel">
-        <h3>Station Focused</h3>
+        <h3>Designed For The Watch</h3>
         <p>
-          Keep attention on your station, route, and platform instead of digging
-          through a full transit map at the last minute.
+          Keep the important signal on your wrist: destination, arrival timing,
+          and whether it is time to start walking.
         </p>
       </article>
       <article class="feature panel">
-        <h3>Watch Ready</h3>
+        <h3>Private By Default</h3>
         <p>
-          The brand carries the same quick-glance feel as the app: clock, route,
-          and arrival signal in one compact view.
+          No account, no location tracking, and no commute profile stored on a
+          server. Your settings stay on your devices.
         </p>
       </article>
     </div>
@@ -124,7 +125,7 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
   <section class="section app-strip">
     <div class="strip-copy">
       <p class="eyebrow">Glanceable by default</p>
-      <h2>Metro timing, reduced to the useful parts.</h2>
+      <h2>The phone sets the commute. The Watch gives the cue.</h2>
     </div>
     <div class="strip-grid">
       <div class="mini-panel panel">
@@ -145,11 +146,12 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
   <section class="section split-section">
     <div>
       <p class="eyebrow">Simple by design</p>
-      <h2>Less schedule hunting. More making the train.</h2>
+      <h2>Starting narrow, so the timing can feel right.</h2>
     </div>
     <p>
-      NextMetro is for the small window before a trip starts. Open it, check
-      the next train, and leave at the right moment.
+      NextMetro is currently being shaped around a focused WMATA commute before
+      expanding to more stations and directions. The goal is a utility that
+      earns trust in the ordinary five minutes before you leave.
     </p>
   </section>
 </SiteLayout>
