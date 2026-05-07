@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0d161b"/>
+      <stop offset="0.52" stop-color="#101d22"/>
+      <stop offset="1" stop-color="#070d10"/>
+    </linearGradient>
+    <linearGradient id="route" x1="0" x2="1">
+      <stop offset="0" stop-color="#00a94f"/>
+      <stop offset="0.58" stop-color="#60eba2"/>
+      <stop offset="1" stop-color="#57c7ff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.76" cy="0.28" r="0.6">
+      <stop offset="0" stop-color="#60eba2" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#60eba2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <path d="M655 120c138-62 265-54 383 26" fill="none" stroke="#57c7ff" stroke-opacity="0.18" stroke-width="2"/>
+  <path d="M640 162c151-58 286-44 403 42" fill="none" stroke="#60eba2" stroke-opacity="0.18" stroke-width="2"/>
+  <g transform="translate(92 112)">
+    <g transform="translate(0 0)">
+      <rect width="78" height="78" rx="18" fill="#0d161b" stroke="#00a94f" stroke-width="5"/>
+      <circle cx="39" cy="35" r="21" fill="#132027" stroke="#00a94f" stroke-width="5"/>
+      <path d="M39 20v18l14 8" fill="none" stroke="#f5faf7" stroke-linecap="round" stroke-width="5"/>
+      <path d="M17 60h44" fill="none" stroke="#60eba2" stroke-linecap="round" stroke-width="5"/>
+    </g>
+    <text x="102" y="51" fill="#f5faf7" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="760">NextMetro</text>
+    <text x="0" y="192" fill="#f5faf7" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="780">Leave at the</text>
+    <text x="0" y="280" fill="#f5faf7" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="780">right minute.</text>
+    <text x="3" y="352" fill="#9db5aa" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="520">A Watch-first DC commute helper for</text>
+    <text x="3" y="391" fill="#9db5aa" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="520">real-time Metro leave decisions.</text>
+    <g transform="translate(0 446)" fill="none" stroke-width="3">
+      <path d="M0 20h430" stroke="url(#route)" stroke-linecap="round" stroke-width="12"/>
+      <circle cx="0" cy="20" r="14" fill="#00a94f"/>
+      <circle cx="210" cy="20" r="14" fill="#60eba2"/>
+      <circle cx="430" cy="20" r="14" fill="#57c7ff"/>
+    </g>
+  </g>
+  <g transform="translate(770 96)" filter="url(#shadow)">
+    <rect x="87" y="0" width="126" height="438" rx="58" fill="#11181c"/>
+    <rect x="0" y="44" width="300" height="470" rx="88" fill="#18262d" stroke="#33434a" stroke-width="10"/>
+    <rect x="28" y="74" width="244" height="410" rx="64" fill="#080e11"/>
+    <text x="62" y="128" fill="#9db5aa" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="680">NextMetro</text>
+    <text x="206" y="128" fill="#f5faf7" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="760">7:42</text>
+    <circle cx="150" cy="202" r="54" fill="#132027" stroke="#00a94f" stroke-width="8"/>
+    <path d="M150 166v39l30 18" fill="none" stroke="#f5faf7" stroke-linecap="round" stroke-width="7"/>
+    <rect x="52" y="298" width="196" height="126" rx="28" fill="#132027" stroke="#273940" stroke-width="2"/>
+    <text x="74" y="342" fill="#60eba2" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="760">Green Line</text>
+    <text x="74" y="381" fill="#f5faf7" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="780">Board in 8</text>
+    <text x="75" y="411" fill="#9db5aa" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="620">Leave now</text>
+  </g>
+</svg>
