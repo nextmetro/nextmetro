@@ -18,9 +18,8 @@ import SiteLayout from "../layouts/SiteLayout.astro";
       <h2>Data We Collect</h2>
       <p>
         NextMetro does not collect personal data from you and does not require
-        an account. Your WMATA API key, walk buffer, commute window, and route
-        settings are stored on your devices so the app can request relevant train
-        predictions.
+        an account. Your walk buffer, commute window, and route settings are
+        stored on your devices so the app can request relevant train predictions.
       </p>
     </div>
 
@@ -35,18 +34,19 @@ import SiteLayout from "../layouts/SiteLayout.astro";
     <div class="content-block">
       <h2>Apple Watch Sync</h2>
       <p>
-        If you use the Apple Watch app, NextMetro syncs your WMATA API key and
-        commute settings from your iPhone to your Apple Watch using Apple's
-        WatchConnectivity framework.
+        If you use the Apple Watch app, NextMetro syncs commute settings from
+        your iPhone to your Apple Watch using Apple's WatchConnectivity
+        framework.
       </p>
     </div>
 
     <div class="content-block">
       <h2>WMATA</h2>
       <p>
-        NextMetro sends your WMATA API key to WMATA only when requesting train
-        predictions. WMATA provides the arrival data and may process requests
-        according to its own terms and policies.
+        NextMetro requests train predictions through a NextMetro-operated proxy
+        at api.nextmetro.app. The proxy adds NextMetro's WMATA API key before
+        forwarding the prediction request to WMATA. WMATA provides the arrival
+        data and may process requests according to its own terms and policies.
       </p>
     </div>
 
