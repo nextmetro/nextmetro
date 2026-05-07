@@ -85,6 +85,9 @@ const previewImageUrl = new URL(withBase("/preview.png"), Astro.site ?? Astro.ur
           <span>NextMetro</span>
         </a>
         <p>Know when to leave for the next train.</p>
+        <p class="footer-disclaimer">
+          NextMetro is an independent app and is not affiliated with WMATA.
+        </p>
       </div>
       <nav aria-label="Footer navigation">
         <a href={withBase("/privacy/")}>Privacy</a>
@@ -411,6 +414,11 @@ const previewImageUrl = new URL(withBase("/preview.png"), Astro.site ?? Astro.ur
   .site-footer p {
     margin: 12px 0 0;
     font-size: 0.95rem;
+  }
+
+  .site-footer .footer-disclaimer {
+    max-width: 460px;
+    font-size: 0.82rem;
   }
 
   .site-footer nav a {
