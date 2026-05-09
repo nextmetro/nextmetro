@@ -52,6 +52,14 @@ const appStoreUrl = "https://apps.apple.com/us/app/nextmetro/id6767340375";
     <link rel="icon" href={withBase("/favicon.ico")} />
     <link rel="apple-touch-icon" href={withBase("/apple-touch-icon.png")} />
     <link rel="manifest" href={withBase("/site.webmanifest")} />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDH6X6RKZJ"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+
+      gtag("config", "G-DDH6X6RKZJ");
+    </script>
     <title>{title}</title>
   </head>
   <body>
