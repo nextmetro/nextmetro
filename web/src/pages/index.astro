@@ -4,6 +4,9 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 const baseUrl = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
+const appStoreUrl = "https://apps.apple.com/us/app/nextmetro/id6767340375";
+const appStoreBadgeUrl =
+  "https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83";
 ---
 
 <SiteLayout
@@ -20,7 +23,9 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
         train.
       </p>
       <div class="button-row">
-        <a class="button primary" href="mailto:support@nextmetro.app?subject=NextMetro%20Beta">Join Beta</a>
+        <a class="app-store-badge" href={appStoreUrl} aria-label="Download NextMetro on the App Store">
+          <img src={appStoreBadgeUrl} alt="Download on the App Store" loading="eager" />
+        </a>
         <a class="button secondary" href={`${baseUrl}support/`}>Get Support</a>
       </div>
       <div class="trust-row" aria-label="NextMetro product highlights">
@@ -69,7 +74,7 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
         <strong>8 min</strong>
       </div>
       <div class="floating-card station-card panel" aria-hidden="true">
-        <span>Current beta</span>
+        <span>Now available</span>
         <strong>Navy Yard/Ballpark</strong>
       </div>
     </div>
@@ -90,9 +95,8 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
       <h2>Built for the small decision before a trip starts.</h2>
     </div>
     <p>
-      The first beta is focused on a Navy Yard to Greenbelt commute, with the
-      phone app handling settings and Apple Watch keeping the actual departure
-      cue close at hand.
+      NextMetro is now available on the App Store, with the phone app handling
+      settings and Apple Watch keeping the actual departure cue close at hand.
     </p>
   </section>
 
@@ -179,6 +183,27 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
 
   .hero-copy {
     min-width: 0;
+  }
+
+  .app-store-badge {
+    display: inline-flex;
+    align-items: center;
+    width: 172px;
+    height: 57px;
+    flex: 0 0 auto;
+    overflow: hidden;
+    border-radius: 13px;
+    transition: transform 160ms ease;
+  }
+
+  .app-store-badge:hover {
+    transform: translateY(-1px);
+  }
+
+  .app-store-badge img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   .hero h1 {

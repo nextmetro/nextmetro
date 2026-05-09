@@ -1,5 +1,7 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
+
+const appStoreUrl = "https://apps.apple.com/us/app/nextmetro/id6767340375";
 ---
 
 <SiteLayout
@@ -24,13 +26,13 @@ import SiteLayout from "../layouts/SiteLayout.astro";
     </div>
 
     <div class="contact-panel panel">
-      <h2>Beta Access</h2>
+      <h2>Get NextMetro</h2>
       <p>
-        NextMetro is starting with a focused WMATA commute beta. If you want to
-        test it, include your iPhone model, Apple Watch model, usual station,
-        and destination.
+        NextMetro for iPhone and Apple Watch is released on the App Store.
+        Install it there, then contact support if setup or Watch sync needs a
+        hand.
       </p>
-      <a class="button secondary" href="mailto:support@nextmetro.app?subject=NextMetro%20Beta">Join Beta</a>
+      <a class="button secondary" href={appStoreUrl}>Open App Store</a>
     </div>
 
     <div class="content-block">

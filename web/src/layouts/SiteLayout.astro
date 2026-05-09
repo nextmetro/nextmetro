@@ -22,6 +22,7 @@ const isCurrent = (path: string) =>
   currentPath === path || currentPath === withBase(path);
 const pageUrl = new URL(currentPath, Astro.site ?? Astro.url.origin);
 const previewImageUrl = new URL(withBase("/preview.png"), Astro.site ?? Astro.url.origin);
+const appStoreUrl = "https://apps.apple.com/us/app/nextmetro/id6767340375";
 ---
 
 <!doctype html>
@@ -97,6 +98,7 @@ const previewImageUrl = new URL(withBase("/preview.png"), Astro.site ?? Astro.ur
         </p>
       </div>
       <nav aria-label="Footer navigation">
+        <a href={appStoreUrl}>App Store</a>
         <a href={withBase("/privacy/")}>Privacy</a>
         <a href={withBase("/support/")}>Support</a>
         <a href="mailto:support@nextmetro.app">support@nextmetro.app</a>
