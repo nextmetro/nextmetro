@@ -22,7 +22,7 @@ const isCurrent = (path: string) =>
   currentPath === path || currentPath === withBase(path);
 const pageUrl = new URL(currentPath, Astro.site ?? Astro.url.origin);
 const canonicalUrl = pageUrl.href;
-const previewImageUrl = new URL(withBase("/preview.png"), Astro.site ?? Astro.url.origin);
+const previewImageUrl = new URL(withBase("/og-image.png"), Astro.site ?? Astro.url.origin);
 const appStoreUrl = "https://apps.apple.com/us/app/nextmetro/id6767340375";
 ---
 
