@@ -21,6 +21,7 @@ const withBase = (path: string) =>
 const isCurrent = (path: string) =>
   currentPath === path || currentPath === withBase(path);
 const pageUrl = new URL(currentPath, Astro.site ?? Astro.url.origin);
+const canonicalUrl = pageUrl.href;
 const previewImageUrl = new URL(withBase("/preview.png"), Astro.site ?? Astro.url.origin);
 const appStoreUrl = "https://apps.apple.com/us/app/nextmetro/id6767340375";
 ---
@@ -36,7 +37,7 @@ const appStoreUrl = "https://apps.apple.com/us/app/nextmetro/id6767340375";
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={pageUrl} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={previewImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -47,7 +48,7 @@ const appStoreUrl = "https://apps.apple.com/us/app/nextmetro/id6767340375";
     <meta name="twitter:image" content={previewImageUrl} />
     <meta name="twitter:image:alt" content="NextMetro Apple Watch commute timing preview" />
     <meta name="theme-color" content="#0d161b" />
-    <link rel="canonical" href={pageUrl} />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
     <link rel="icon" href={withBase("/favicon.ico")} />
     <link rel="apple-touch-icon" href={withBase("/apple-touch-icon.png")} />
